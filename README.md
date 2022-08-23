@@ -111,6 +111,22 @@ let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 ```
 
+# RUN
+run this when you put the config in ```~/.config/nvim/init.vim ```
+
+```
+:PlugClean :PlugInstall :UpdateRemotePlugins
+:CocInstall coc-python
+:CocInstall coc-clangd
+:CocInstall coc-snippets
+```
+
+# Note
+```
+:CocCommand snippets.edit... FOR EACH FILE TYPE
+```
+
+
 
 
 
