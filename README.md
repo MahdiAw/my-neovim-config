@@ -20,8 +20,8 @@ my personal neovim configuration
 ```
 
 * Plugs
-call plug#begin()
 ```
+call plug#begin()
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
