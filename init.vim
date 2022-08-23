@@ -1,3 +1,4 @@
+" setters
 :set number
 :set relativenumber
 :set autoindent
@@ -6,7 +7,8 @@
 :set smarttab
 :set softtabstop=4
 :set mouse=a
-
+:set completeopt-=preview " For No Previews
+:set clipboard=unnamed
 
 
 
@@ -31,14 +33,16 @@ Plug 'https://github.com/nathanaelkane/vim-indent-guides'
 Plug 'Yggdroot/indentLine'
 set encoding=utf8
 call plug#end()
+
 " nerd tree conf
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
-nmap <F8> :TagbarToggle<CR>
-:set completeopt-=preview " For No Previews
 
+"tagbar config
+nmap <F8> :TagbarToggle<CR>
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 nnoremap<C-p> :Ag <CR>
 
 
@@ -70,8 +74,6 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
 
 
 " discord presence 
@@ -97,7 +99,6 @@ let g:presence_plugin_manager_text = "Managing plugins"
 let g:presence_reading_text        = "Reading %s"
 let g:presence_workspace_text      = "Working on %s"
 let g:presence_line_number_text    = "Line %s out of %s"
-set clipboard=unnamed
 
 
 "folding
