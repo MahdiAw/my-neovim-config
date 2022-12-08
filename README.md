@@ -113,7 +113,14 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 # RUN
 run this when you put the config in ```~/.config/nvim/init.vim ```
-
+# SHELL
+```
+pacman -S ctags npm nodejs yarn
+pip3 install pylint jedi
+cd ~/.local/share/nvim/plugged/coc.nvim
+yarn install
+yarn build
+```
 ```
 :PlugClean :PlugInstall :UpdateRemotePlugins
 :CocInstall coc-python
