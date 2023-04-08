@@ -6,7 +6,7 @@ my personal neovim configuration
 
 
 * SETTERS 
-```
+```css
 :set number
 :set relativenumber
 :set autoindent
@@ -20,7 +20,7 @@ my personal neovim configuration
 ```
 
 * Plugs
-```
+```css
 call plug#begin()
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
@@ -44,7 +44,7 @@ call plug#end()
 ```
 
 * NerdTree Config
-```
+```css
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -53,13 +53,13 @@ let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 ```
 * TagBar Config
-```
+```css
 nmap <F8> :TagbarToggle<CR>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 nnoremap<C-p> :Ag <CR>
 ```
 * Airline 
-```
+```css
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
@@ -75,11 +75,11 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 ```
 * discord presence
-```
+```css
 let g:presence_auto_update         = 1
 let g:presence_neovim_image_text   = "The One True Text Editor"
 let g:presence_main_image          = "neovim"
-let g:presence_client_id           = "793271441293967371"
+let g:presence_client_id           = ""
 let g:presence_debounce_timeout    = 10
 let g:presence_enable_line_number  = 0
 let g:presence_blacklist           = []
@@ -97,7 +97,7 @@ let g:presence_line_number_text    = "Line %s out of %s"
 
 ```
 * Folding
-```
+```css
 :let g:NERDTreeWinSize=25
 augroup vimrc
   au BufReadPre * setlocal foldmethod=indent
@@ -105,7 +105,7 @@ augroup vimrc
 augroup END
 ```
 * Vertical lines 
-```
+```css
 let g:indentLine_color_term = 239
 let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -114,14 +114,19 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 # RUN
 run this when you put the config in ```~/.config/nvim/init.vim ```
 # SHELL
-```
+```sh
 pacman -S ctags npm nodejs yarn
 pip3 install pylint jedi
 cd ~/.local/share/nvim/plugged/coc.nvim
 yarn install
 yarn build
+
+
+
+pacman -S fzf
+pacman -S the_silver_searcher
 ```
-```
+```css
 :PlugClean :PlugInstall :UpdateRemotePlugins
 :CocInstall coc-python
 :CocInstall coc-clangd
@@ -129,7 +134,7 @@ yarn build
 ```
 
 # Note
-```
+```css
 :CocCommand snippets.edit... FOR EACH FILE TYPE
 ```
 
